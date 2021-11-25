@@ -1,0 +1,67 @@
+.logo {
+    width: 150px;
+}
+
+.img-banner {
+    width: 600px;
+}
+
+p {
+    text-align: justify;
+}
+
+.img-destaque {
+    width: 230px;
+}
+
+.galeria {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 230px;
+    float: left;
+    width: 250px;
+}
+
+.galeria p {
+    margin-left: 20px;
+}
+
+.img-novidades {
+    width: 600px;
+}
+
+.facebook {
+    color: #3b5998;;
+}
+
+.instagram {
+    color: #cd486b;
+}
+
+.whatsapp {
+    color: #34af23;
+}
+
+.youtube {
+    color: red;
+}
+
+.hard {
+    width: 100px;
+}
+
+.hardd {
+    width: 150px;
+}
+
+.harddd {
+    width: 170px;
+}
+
+.table {
+    text-align: center;
+}
+
+.fundo {
+    background-color: #cccc;
+}

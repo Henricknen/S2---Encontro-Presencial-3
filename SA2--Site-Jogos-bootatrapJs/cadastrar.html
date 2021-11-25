@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+
+    <script src="https://kit.fontawesome.com/7fee13b617.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    
+
+    <title>Site de Jogos</title>
+  </head>
+  <body> 
+    <header>           
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+              <img class="logo" src="img/senai-logo.png" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto me-5">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">jogos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hardware.html">Hardware</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Celulares</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PC-Gamer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">contatos</a>
+                </li>
+                
+              </ul>
+
+              <a class="nav-link active" href="cadastrar.html">Cadastre-se</a>
+
+                <button class="btn btn-info me-5" type="submit">Login</button>
+              
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid fundo py-3">
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+              <form action="" onsubmit="return gerar_json(this);">
+                    <h2>Cadastro de Usuário</h2>
+                    
+                        <label class="form-label">Nome</label>
+                        <input class="form-control" name="nome" id="nome" type="text" minlength="3" maxlength="60">
+                        
+                        <label class="form-label">CPF</label>
+                        <input class="form-control cpf_mask" name="cpf" id="cpf" type="text" maxlength="14">
+                        
+                        <label class="form-label">Telefone Residencial</label>
+                        <input class="form-control tel_res_mask" name="telefone_res" id="telefone_res" type="text" maxlength="13">
+                        
+                        <label class="form-label">Telefone Celular</label>
+                        <input class="form-control tel_cel_mask" name="telefone_cel" id="telefone_cel" type="text" maxlength="13">
+                    
+        
+                    <!--Campos de Busca do Endereço-->
+                    <label class="form-label">CEP</label>
+                    <input class="form-control cep_mask" onblur="pesquisa_cep(this.value);" name="cep" id="cep" type="text" maxlength="9">
+        
+                    <label class="form-label">Endereço</label>
+                    <input class="form-control" disabled name="endereco" id="endereco">
+        
+                    <label class="form-label">Número</label>
+                    <input class="form-control" name="numero" id="numero">
+        
+                    <label class="form-label">Bairro</label>
+                    <input class="form-control" disabled name="bairro" id="bairro">
+        
+                    <label class="form-label">Cidade</label>
+                    <input class="form-control" disabled name="cidade" id="cidade">
+        
+                    <label class="form-label">Estado</label>
+                    <input class="form-control" disabled name="estado" id="estado">
+        
+                    <label class="form-label">IBGE</label>
+                    <input class="form-control" disabled name="ibge" id="ibge">
+                    <br>
+                    <button class="btn btn-success"  type="submit">Cadastrar</button>
+
+                    
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-md-4 text-center align-self-center">
+            
+              <a href="#">
+                <img class="logo" src="img/senai-logo.png" alt="logo">
+              </a>
+            
+          </div>
+          <div class="col-md-4 my-3 ">
+            <div >
+              <p class="fw-bold">E-mail:</p>
+              <p>exemplo@exemplo.com</p>
+            </div>
+
+            <div>
+              <p class="fw-bold">Endereço</p>
+              <p>A. ABC, 123</p>
+            </div>
+            
+            <div>
+              <p class="fw-bold">Tel:</p>
+              <p>(18)9999-9999)</p>
+            </div>
+
+          </div>
+          <div class="col-md-4 text-start mt-3">
+
+            <div class="container-fluid ">
+              <a href=""><i class="fab fa-facebook fa-5x redes-sociais-face" ></i></a>
+              <a href=""><i class="fab fa-instagram fa-5x redes-sociais-insta"></i></a>
+              <a href=""><i class="fab fa-whatsapp fa-5x redes-sociais-whats"></i></a>
+              <a href=""><i class="fab fa-youtube fa-5x redes-sociais-yt"></i></a>
+            </div>
+
+            <div class="container-fluid">
+              <ul class="navbar-nav mt-2 text-start">
+                <li class="nav-item">
+                  <a class="nav-link" href="">Jogos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Hardware</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Celulares</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">PC-Gamers</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          
+          
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Carrega os scripts para  página-->
+    <script src="js/script.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
